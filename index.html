@@ -5,12 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maina Motors Imports</title>
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Maina Motors Imports Logo" class="logo">
-    <h1>Maina Motors Imports</h1>
-    <nav>
+    <div class="logo-container">
+      <img src="logo.png" alt="Maina Motors Imports Logo" class="logo">
+      <h1>Maina Motors Imports</h1>
+    </div>
+
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+
+    <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="buy.html">Buy</a>
       <a href="sell.html">Sell</a>
@@ -22,50 +32,45 @@
   </header>
 
   <section class="hero">
-    <h2>Luxury, Reliability, and Performance</h2>
-    <p>Explore the best cars for sale, hire, and import with Maina Motors Imports.</p>
-    <a href="buy.html" class="btn">Shop Now</a>
+    <div class="hero-content">
+      <h2>Luxury, Reliability, and Performance</h2>
+      <p>Explore premium cars for sale, hire, and import with Maina Motors Imports.</p>
+      <a href="buy.html" class="btn">Shop Now</a>
+    </div>
   </section>
 
   <section class="featured">
     <h2>Featured Cars</h2>
     <div class="car-grid">
+
       <div class="car">
-        <img src="https://images.unsplash.com/photo-1605559424843-83a8ef1f74b9" alt="Range Rover Sport">
+        <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/range-rover-2178613_1280.jpg" alt="Range Rover Sport">
         <h3>Range Rover Sport</h3>
         <p>2022 • KES 9,500,000</p>
-        <button>Buy Now</button>
+        <button class="buy-btn">Buy Now</button>
       </div>
+
       <div class="car">
-        <img src="https://images.unsplash.com/photo-1603791452906-cf5de75e60d8" alt="Toyota Land Cruiser">
+        <img src="https://cdn.pixabay.com/photo/2016/11/29/05/08/toyota-land-cruiser-1868598_1280.jpg" alt="Land Cruiser">
         <h3>Toyota Land Cruiser</h3>
         <p>2023 • KES 11,200,000</p>
-        <button>Buy Now</button>
+        <button class="buy-btn">Buy Now</button>
       </div>
+
       <div class="car">
-        <img src="https://images.unsplash.com/photo-1605559424998-6e3e37e4974a" alt="Mercedes-Benz GLE">
+        <img src="https://cdn.pixabay.com/photo/2018/06/04/22/31/mercedes-benz-3453065_1280.jpg" alt="Mercedes-Benz GLE">
         <h3>Mercedes-Benz GLE</h3>
         <p>2023 • KES 8,800,000</p>
-        <button>Buy Now</button>
+        <button class="buy-btn">Buy Now</button>
       </div>
+
       <div class="car">
-        <img src="https://images.unsplash.com/photo-1610974162950-b5d39a2b50d4" alt="BMW X6">
+        <img src="https://cdn.pixabay.com/photo/2020/04/24/08/40/bmw-x6-5085432_1280.jpg" alt="BMW X6">
         <h3>BMW X6</h3>
         <p>2021 • KES 7,200,000</p>
-        <button>Buy Now</button>
+        <button class="buy-btn">Buy Now</button>
       </div>
-      <div class="car">
-        <img src="https://images.unsplash.com/photo-1622025437481-56c6b1b7b7c4" alt="Mazda CX-5">
-        <h3>Mazda CX-5</h3>
-        <p>2021 • KES 2,200,000</p>
-        <button>Buy Now</button>
-      </div>
-      <div class="car">
-        <img src="https://images.unsplash.com/photo-1605559424843-83a8ef1f74b9" alt="Nissan Patrol">
-        <h3>Nissan Patrol</h3>
-        <p>2020 • KES 5,900,000</p>
-        <button>Buy Now</button>
-      </div>
+
     </div>
   </section>
 
