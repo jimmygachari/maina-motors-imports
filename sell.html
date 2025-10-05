@@ -1,28 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Sell - Maina Motors Imports</title>
-<link rel="stylesheet" href="style.css"/><script defer src="script.js"></script></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell | Maina Motors Imports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header>
-  <div class="header-inner">
-    <div class="logo"><img src="logo.png" alt="logo"/><div><strong>Maina Motors</strong><div style="font-size:0.8rem;color:#ffd700">Imports</div></div></div>
-    <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="buy.html">Buy</a></li><li><a href="sell.html">Sell</a></li><li><a href="hire.html">Hire</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="login.html">Login</a></li></ul></nav>
-  </div>
-</header>
-<main class="container">
-  <h2 class="section-title">Sell Your Car</h2>
-  <p class="small center">Fill the form below to list your car. Our team will review before publishing.</p>
-  <form id="sellForm" style="max-width:700px;margin:18px auto">
-    <div class="form-group"><label>Car Title</label><input type="text" name="title" required></div>
-    <div class="form-group"><label>Make & Model</label><input type="text" name="make" required></div>
-    <div class="form-group"><label>Year</label><input type="number" name="year" required></div>
-    <div class="form-group"><label>Price (KES)</label><input type="number" name="price" required></div>
-    <div class="form-group"><label>Image URL</label><input type="text" name="image" placeholder="https://..."></div>
-    <div class="form-group"><label>Contact Email</label><input type="email" name="email"></div>
-    <div class="form-actions"><button class="btn btn-red" type="submit">Submit Listing</button></div>
-  </form>
-  <div id="sellMessage" class="center small"></div>
-</main>
-<footer class="footer">© 2025 Maina Motors Imports</footer>
+  <header>
+    <div class="nav-container">
+      <h1 class="site-title">Maina Motors Imports</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="buy.html">Buy</a>
+        <a href="sell.html" class="active">Sell</a>
+        <a href="hire.html">Hire</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-section">
+    <h2>Sell Your Car</h2>
+    <p>List your car for sale — posting fee is <strong>KES 5,000</strong>.</p>
+
+    <form class="sell-form">
+      <input type="text" placeholder="Car Model" required>
+      <input type="text" placeholder="Year" required>
+      <input type="number" placeholder="Price (KES)" required>
+      <input type="file" accept="image/*" required>
+      <button type="submit" class="btn">Post Car for Sale</button>
+    </form>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Maina Motors Imports | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
