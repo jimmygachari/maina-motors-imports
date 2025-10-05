@@ -1,51 +1,64 @@
+/* General Styling */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   background: #f5f5f5;
   color: #222;
+  overflow-x: hidden;
 }
 
+/* Header Section */
 header {
   background: #fff;
   color: #d32f2f;
   text-align: center;
-  padding: 15px 0;
+  padding: 15px 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .logo {
-  width: 80px;
+  width: 70px;
   border-radius: 50%;
   vertical-align: middle;
 }
 
+/* Navigation */
 nav {
   margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 nav a {
   color: #d32f2f;
   text-decoration: none;
-  margin: 0 12px;
-  font-weight: bold;
+  font-weight: 600;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #222;
+  color: #000;
 }
 
+/* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
               url('https://images.unsplash.com/photo-1605559424843-83a8ef1f74b9') center/cover;
   color: #fff;
   text-align: center;
-  padding: 120px 20px;
+  padding: 100px 20px;
 }
 
 .hero h2 {
-  font-size: 2.5em;
+  font-size: 2.2em;
   margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
 }
 
 .btn {
@@ -55,16 +68,25 @@ nav a:hover {
   padding: 12px 30px;
   border-radius: 30px;
   text-decoration: none;
-  margin-top: 15px;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background: #b71c1c;
+  transform: scale(1.05);
 }
 
+/* Featured Section */
 .featured {
   text-align: center;
   padding: 60px 20px;
+}
+
+.featured h2 {
+  color: #d32f2f;
+  font-size: 1.8em;
+  margin-bottom: 30px;
 }
 
 .car-grid {
@@ -78,6 +100,11 @@ nav a:hover {
   border-radius: 12px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.car:hover {
+  transform: translateY(-5px);
 }
 
 .car img {
@@ -88,6 +115,12 @@ nav a:hover {
 
 .car h3 {
   margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.car p {
+  color: #444;
+  font-size: 0.95em;
 }
 
 .car button {
@@ -98,12 +131,16 @@ nav a:hover {
   margin-bottom: 15px;
   border-radius: 20px;
   cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .car button:hover {
   background: #b71c1c;
+  transform: scale(1.05);
 }
 
+/* Footer */
 footer {
   background: #fff;
   color: #555;
@@ -111,4 +148,56 @@ footer {
   padding: 20px;
   font-size: 0.9em;
   border-top: 1px solid #ddd;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 5px;
+  }
+
+  .logo {
+    width: 60px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  .btn {
+    padding: 10px 25px;
+  }
+
+  .featured {
+    padding: 40px 10px;
+  }
+
+  .featured h2 {
+    font-size: 1.5em;
+  }
+
+  .car-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .car img {
+    height: 180px;
+  }
+
+  footer {
+    font-size: 0.8em;
+    padding: 15px;
+  }
 }
