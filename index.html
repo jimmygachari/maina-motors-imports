@@ -1,57 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Maina Motors Imports</title>
-  <link rel="stylesheet" href="style.css"/>
-  <script defer src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maina Motors Imports | Home</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="header-inner">
-      <div class="logo">
-        <img src="logo.png" alt="Maina Motors Imports logo"/>
-        <div><strong>Maina Motors</strong><div style="font-size:0.8rem;color:#ffd700">Imports</div></div>
-      </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="buy.html">Buy</a></li>
-          <li><a href="sell.html">Sell</a></li>
-          <li><a href="hire.html">Hire</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="login.html">Login</a></li>
-        </ul>
-      </nav>
+
+  <!-- HEADER SECTION -->
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="Maina Motors Imports Logo" class="site-logo">
+      <h1>Maina Motors Imports</h1>
     </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="hire.html">Hire</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <!-- HERO SECTION -->
   <section class="hero">
-    <div class="hero-overlay">
-      <h1>Premium imported cars for sale & hire</h1>
-      <p>Trusted imports, transparent pricing, and easy financing options. Browse top vehicles from Range Rover, BMW, Mercedes and more.</p>
-      <div class="cta-buttons">
-        <a class="btn btn-red" href="buy.html">Buy a Car</a>
-        <a class="btn btn-white" href="sell.html">Sell Your Car</a>
-        <a class="btn btn-white" href="hire.html">Hire a Car</a>
+    <div class="hero-content">
+      <h2>Drive Your Dream Car Today</h2>
+      <p>Explore a wide range of imported vehicles, from luxurious sedans to powerful SUVs — all at unbeatable prices.</p>
+      <a href="buy.html" class="btn-primary">Browse Cars</a>
+    </div>
+  </section>
+
+  <!-- FEATURED CARS SECTION -->
+  <section class="featured">
+    <h2>Featured Vehicles</h2>
+    <div class="car-grid">
+      <div class="car-card">
+        <img src="car1.jpg" alt="Toyota Prado">
+        <h3>Toyota Prado 2020</h3>
+        <p>KSh 5,200,000</p>
+        <a href="buy.html" class="btn-secondary">View Details</a>
       </div>
-      <div class="search-bar">
-        <input id="homeSearch" type="text" placeholder="Search cars by model, brand, or price e.g. 'Range Rover'"/>
+      <div class="car-card">
+        <img src="car2.jpg" alt="Mercedes-Benz C-Class">
+        <h3>Mercedes-Benz C-Class 2021</h3>
+        <p>KSh 6,700,000</p>
+        <a href="buy.html" class="btn-secondary">View Details</a>
+      </div>
+      <div class="car-card">
+        <img src="car3.jpg" alt="Mazda CX-5">
+        <h3>Mazda CX-5 2019</h3>
+        <p>KSh 3,800,000</p>
+        <a href="buy.html" class="btn-secondary">View Details</a>
       </div>
     </div>
   </section>
 
-  <main class="container">
-    <h2 class="section-title">Best Offers</h2>
-    <div id="featured" class="grid">
-      <!-- featured cards inserted by JS -->
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <div class="about-content">
+      <h2>Why Choose Maina Motors Imports?</h2>
+      <p>
+        At Maina Motors Imports, we make your car import journey seamless and stress-free. 
+        We handle everything — from inspection and shipping to clearance and delivery — 
+        ensuring you get your dream car safely and affordably.
+      </p>
+      <ul>
+        <li>✅ Verified and trusted dealers</li>
+        <li>🚗 Flexible financing options</li>
+        <li>🛠️ Quality assurance and inspection</li>
+        <li>🌍 Direct import from Japan and UK</li>
+      </ul>
     </div>
-  </main>
+  </section>
 
-  <footer class="footer">
-    © 2025 Maina Motors Imports • Nairobi, Kenya • <a href="https://github.com/jimmygachari" target="_blank" style="color:#ffd700">github.com/jimmygachari</a>
+  <!-- FOOTER SECTION -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Maina Motors Imports. All Rights Reserved.</p>
+    <p>Follow us on 
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">Twitter</a>
+    </p>
   </footer>
+
 </body>
 </html>
