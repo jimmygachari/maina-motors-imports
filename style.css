@@ -1,3 +1,7 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -5,9 +9,9 @@ body {
   color: #222;
 }
 
+/* Header + Nav */
 header {
   background: #fff;
-  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,6 +20,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  animation: fadeDown 1s ease;
 }
 
 .logo {
@@ -52,16 +57,43 @@ nav a {
   text-decoration: none;
   color: #000;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
-nav a:hover {
-  color: red;
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: red;
+  transition: width 0.3s;
 }
 
+nav a:hover::after {
+  width: 100%;
+}
+
+.hire-btn {
+  background: red;
+  color: white !important;
+  padding: 6px 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px red;
+  transition: all 0.3s ease;
+}
+
+.hire-btn:hover {
+  background: #d90000;
+  box-shadow: 0 0 20px red;
+}
+
+/* Hero Section */
 .hero {
   background: url('https://cdn.pixabay.com/photo/2020/08/05/16/19/range-rover-5466106_1280.jpg') center/cover no-repeat;
-  height: 70vh;
+  height: 75vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -73,14 +105,14 @@ nav a:hover {
 .hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0;
-  right: 0; bottom: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(0, 0, 0, 0.6);
 }
 
 .hero-text {
   position: relative;
   z-index: 1;
+  animation: fadeIn 2s ease;
 }
 
 .hero h2 {
@@ -104,23 +136,7 @@ nav a:hover {
   background: #fff;
 }
 
-.search input {
-  width: 250px;
-  padding: 10px;
-  margin-right: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.search button {
-  padding: 10px 20px;
-  background: red;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+/* Cars Section */
 .cars {
   padding: 50px 20px;
   text-align: center;
@@ -152,22 +168,21 @@ nav a:hover {
   object-fit: cover;
 }
 
-.car-card h3 {
-  margin: 10px 0 5px;
-}
-
-.car-card button {
-  background: red;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
+/* Footer */
 footer {
   background: #111;
   color: #fff;
   text-align: center;
   padding: 20px;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
