@@ -1,23 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Hire - Maina Motors Imports</title>
-<link rel="stylesheet" href="style.css"/><script defer src="script.js"></script></head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire | Maina Motors Imports</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<header>
-  <div class="header-inner">
-    <div class="logo"><img src="logo.png" alt="logo"/><div><strong>Maina Motors</strong><div style="font-size:0.8rem;color:#ffd700">Imports</div></div></div>
-    <nav><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="buy.html">Buy</a></li><li><a href="sell.html">Sell</a></li><li><a href="hire.html">Hire</a></li><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="login.html">Login</a></li></ul></nav>
-  </div>
-</header>
-<main class="container">
-  <h2 class="section-title">Hire a Car</h2>
-  <p class="center small notice">Hiring is available to registered members with an account older than 6 months. Please <a href="login.html">login</a> or <a href="register.html">register</a>.</p>
-  <div class="grid">
-    <!-- sample hire cards -->
-    <div class="card"><img src="https://images.unsplash.com/photo-1549921296-3a9b3b9fd2b9?auto=format&fit=crop&w=1200&q=80"><h3>Range Rover Sport</h3><p class="meta">From KES 12,000/day</p><div class="form-actions"><a class="btn btn-white" href="login.html">Login to Hire</a></div></div>
-    <div class="card"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=1200&q=80"><h3>Mercedes GLE</h3><p class="meta">From KES 9,000/day</p><div class="form-actions"><a class="btn btn-white" href="login.html">Login to Hire</a></div></div>
-  </div>
-</main>
-<footer class="footer">© 2025 Maina Motors Imports</footer>
+  <header>
+    <div class="nav-container">
+      <h1 class="site-title">Maina Motors Imports</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="buy.html">Buy</a>
+        <a href="sell.html">Sell</a>
+        <a href="hire.html" class="active">Hire</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-section">
+    <h2>Hire a Car</h2>
+    <p>Post a car for hire at a small fee of <strong>KES 1,000</strong>.</p>
+
+    <form class="hire-form">
+      <input type="text" placeholder="Car Model" required>
+      <input type="text" placeholder="Hire Rate per Day (KES)" required>
+      <input type="file" accept="image/*" required>
+      <button type="submit" class="btn">Post Car for Hire</button>
+    </form>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Maina Motors Imports | All Rights Reserved</p>
+  </footer>
 </body>
 </html>
