@@ -30,10 +30,15 @@ header {
   border-radius: 50%;
 }
 
+.nav-links {
+  display: flex;
+  gap: 12px;
+}
+
 .nav-links a {
   color: #fff;
   text-decoration: none;
-  margin: 0 12px;
+  margin: 0 6px;
   transition: color 0.3s;
 }
 
@@ -43,7 +48,7 @@ header {
 
 /* HERO */
 .hero {
-  background: url('https://cdn.pixabay.com/photo/2017/03/27/14/56/range-rover-2178613_1280.jpg') center/cover no-repeat;
+  background: url('https://cdn.pixabay.com/photo/2018/05/02/18/24/audi-3368094_1280.jpg') center/cover no-repeat;
   height: 70vh;
   display: flex;
   align-items: center;
@@ -63,10 +68,11 @@ header {
   position: relative;
   text-align: center;
   z-index: 2;
+  animation: fadeIn 1.2s ease;
 }
 
 .hero-content h2 {
-  font-size: 2em;
+  font-size: 2.2em;
   margin-bottom: 10px;
 }
 
@@ -123,6 +129,7 @@ header {
   border-radius: 6px;
   margin: 10px 0 15px;
   cursor: pointer;
+  transition: background 0.3s;
 }
 
 .buy-btn:hover {
@@ -143,6 +150,7 @@ footer {
   display: none;
   flex-direction: column;
   cursor: pointer;
+  transition: transform 0.3s;
 }
 
 .bar {
@@ -151,36 +159,6 @@ footer {
   background: #ff4444;
   margin: 4px 0;
   border-radius: 5px;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  nav.nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #111;
-    position: absolute;
-    top: 70px;
-    left: 0;
-  }
-
-  nav.nav-links.active {
-    display: flex;
-  }
-
-  nav.nav-links a {
-    padding: 12px 0;
-    text-align: center;
-    border-bottom: 1px solid #333;
-  }
-
-  .hero h2 {
-    font-size: 1.6em;
-  }
 }
 
 /* BACK BUTTON */
@@ -196,4 +174,46 @@ footer {
 
 .back-btn:hover {
   background-color: #b71c1c;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav.nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  nav.nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  nav.nav-links a {
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+  }
+
+  .hero h2 {
+    font-size: 1.6em;
+  }
 }
